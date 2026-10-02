@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>User Manual - [APP NAME]</title><style>
+:root{--bg:#fff;--fg:#1c2430;--mut:#5b6675;--card:#f4f6fa;--line:#dde2ea;--acc:#1f3a5f;--acc2:#2e7d32;--warn:#fff4d6;--warnb:#e0b341}
+@media (prefers-color-scheme:dark){:root{--bg:#12161c;--fg:#e6eaf0;--mut:#9aa6b6;--card:#1a2029;--line:#2a3340;--acc:#7fb0ff;--acc2:#81c784;--warn:#3a3114;--warnb:#a98316}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:var(--acc);color:#fff;padding:28px 20px}header .in,main{max-width:880px;margin:0 auto}
+header h1{margin:0 0 4px;font-size:28px}header p{margin:0;opacity:.9}
+nav{background:var(--card);border-bottom:1px solid var(--line)}nav .in{max-width:880px;margin:0 auto;padding:10px 20px;display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--acc);text-decoration:none;font-weight:600}nav a.on{border-bottom:2px solid var(--acc)}
+main{padding:24px 20px 60px}h2{margin-top:2em;padding-top:.4em;border-top:1px solid var(--line);font-size:22px;color:var(--acc)}h3{margin-top:1.4em;font-size:17px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:16px 0}.warn{background:var(--warn);border-color:var(--warnb)}
+.ph{background:#ffe08a;color:#222;padding:0 4px;border-radius:3px;font-weight:600}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+code{background:var(--card);padding:1px 5px;border-radius:4px;font-size:90%}.toc{columns:2;column-gap:30px}.toc a{color:var(--acc);text-decoration:none}
+.b{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:700;margin-right:4px}.g{background:#43a04722;color:var(--acc2)}.bl{background:#1e88e522;color:var(--acc)}.o{background:#fb8c0022;color:#e65100}.gr{background:#75757522;color:var(--mut)}
+footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:600px){.toc{columns:1}header h1{font-size:23px}}
+</style></head><body><header><div class="in"><h1>User Manual</h1><p>How to use [APP NAME]</p></div></header><nav><div class="in"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="user-manual.html" class="on">User Manual</a></div></nav><main>
+<div class="box warn"><strong>Before you start:</strong> the ready-made presets are set up for the developer&rsquo;s printer (Epson EcoTank L5290, Epson 003 ink) and the developer&rsquo;s prices. Change <strong>all presets</strong> to match your own printer, ink, paper and prices (Settings), or the results will not match your business.</div>
+<h2 style="border:0;margin-top:1em">Contents</h2>
+<div class="toc">
+<a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
+<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#store">8. Store info and currency</a><br>
+<a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
+</div>
+
+<h2 id="quick">1. Quick start</h2>
+<ol>
+<li>Open <strong>Settings</strong> and check your presets (paper, ink, printer, quality). Edit them to match your shop.</li>
+<li>Go to <strong>Settings &rarr; Store info &amp; currency</strong> and enter your store name and currency. Tick the details you want on receipts.</li>
+<li>On the main screen tap <strong>Choose file</strong> and pick a PDF or image.</li>
+<li>Choose your presets (Quick: one setup, or Custom: each preset).</li>
+<li>Set pages, copies and options, then tap <strong>Analyze &amp; Calculate</strong>.</li>
+<li>Read the <strong>Final Price</strong>, then tap <strong>Receipt PDF</strong> or <strong>Receipt Image</strong>.</li>
+</ol>
+
+<h2 id="welcome">2. First launch</h2>
+<p>The first time you open the App you choose how to start:</p>
+<ul><li><strong>Start with ready-made presets</strong>: loads the developer&rsquo;s presets, an ink preset for every ink model and charge mode, and ready-made setups.</li><li><strong>Start empty</strong>: no presets. Create your own in Settings.</li></ul>
+<p>You can change your mind later: <em>Settings &rarr; Add ready-made presets</em> or <em>Delete all presets</em>.</p>
+
+<h2 id="main">3. The main screen</h2>
+<h3>3.1 Choose and clear a file</h3>
+<p>Tap <strong>Choose file</strong> (PDF or image; Word files need an analysis server). The <strong>Clear</strong> button removes the chosen file and its result.</p>
+<h3>3.2 Presets</h3>
+<ul>
+<li><strong>Quick</strong>: pick one <em>setup</em> (a saved combination of paper + ink + printer + quality).</li>
+<li><strong>Custom</strong>: pick each preset yourself. The switch appears once you have at least one setup.</li>
+<li>A grey box shows what the selected presets mean (paper size and charge, ink fixed price or minimums, quality).</li>
+<li>An amber <strong>warning</strong> appears if the page count does not fit the tier of the selected presets, or the paper and ink tiers differ. It can offer to switch to a matching setup.</li>
+</ul>
+<h3>3.3 Pages and options</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Target pages</td><td><code>ALL</code>, a range <code>1-5</code>, or a list <code>1, 3, 7</code>, or <code>2-10, 15</code>. Only these pages are calculated.</td></tr>
+<tr><td>Select pages</td><td>Shows every PDF page as a thumbnail. Tap to select or deselect. <strong>Long-press</strong> a page to see it full screen (pinch to zoom, tap <strong>X</strong> to close). Use All / None, then Done.</td></tr>
+<tr><td>Copies</td><td>How many copies of the selected pages.</td></tr>
+<tr><td>Print sides</td><td><strong>Simplex</strong>: one side per sheet. <strong>Duplex</strong>: both sides, 2 pages per sheet. Paper counts physical sheets (10 pages duplex = 5 sheets); ink counts all 10 printed pages.</td></tr>
+<tr><td>Color mode</td><td><strong>Auto-detect</strong>: colored pages are priced as Color, others as B&amp;W, blank pages get no ink charge. <strong>All B&amp;W</strong> or <strong>All Color</strong> forces the type.</td></tr>
+<tr><td>Analysis source</td><td><strong>Auto</strong> (server if set), <strong>Ghostscript server</strong>, or <strong>Naive RGB (on-device)</strong>, a faster, less accurate estimate on the phone.</td></tr>
+<tr><td>Finishing fee per page</td><td>Extra fee <em>per page</em> for manual work: trimming, stapling, binding, laminating. Added to every page. Use 0 if none.</td></tr>
+<tr><td>Setup fee</td><td>One-time fee for the whole order (downloading, editing, layout). Hidden on the receipt when 0.</td></tr>
+<tr><td>Customer (optional)</td><td>The buyer&rsquo;s name. Saved in History and can show on the receipt.</td></tr>
+<tr><td>Include startup/cleaning ink</td><td>Printers use some ink to start up and clean the print head. Ticking this adds the amounts from the Ink preset (section 7) <em>once</em> to the job. It adds nothing until you enter values there. Leave it off for normal jobs.</td></tr>
+</table>
+<p>Every option has an <strong>(i)</strong> button with a short explanation.</p>
+<h3>3.4 Analyze &amp; Calculate</h3>
+<p>The button stays disabled until a file, a paper preset and an ink preset are chosen. While it works, a screen shows <em>Analyzing page X of N</em> and everything is paused. Each calculation is saved to <strong>History</strong> automatically with a reference number.</p>
+<h3>3.5 Editing a History record</h3>
+<p>Tap the pencil on a History record. An amber banner appears. Change what was wrong, pick the file again if asked, and tap Analyze &amp; Calculate. The same record (and reference number) is updated.</p>
+<p>The App also remembers the screen: when you close and reopen it, your presets, fields and last result are back.</p>
+
+<h2 id="results">4. Reading the results</h2>
+<ul>
+<li><strong>FINAL PRICE</strong>: the amount to charge. Under it: Paper, Ink, Fees and Setup, and the count of B&amp;W, Color and Blank pages.</li>
+<li>If you change anything after calculating, the price turns grey with a line through it and a note asks you to calculate again.</li>
+<li><strong>Receipt PDF</strong> and <strong>Receipt Image</strong> buttons.</li>
+<li><strong>Print analysis details</strong> (closed by default): calculation model, estimated ink (mL) and cost per color, paper, charged ink fee, and <em>View calculation details</em> (every formula input).</li>
+<li><strong>Page-by-page table</strong> (closed by default): coverage C/M/Y/K, type, paper, ink, other and price per page.</li>
+</ul>
+<p>Ink amounts are <strong>estimates</strong>, never exact measurements.</p>
+
+<h2 id="price">5. How the price is calculated</h2>
+<p>For every page:</p>
+<div class="box"><code>Page price = paper + ink + maintenance + finishing</code></div>
+<ul>
+<li><strong>Paper</strong> = the higher of (pack cost &divide; sheets) and the paper preset&rsquo;s <em>Base rate</em>. On duplex each page pays half a sheet.</li>
+<li><strong>Ink</strong> depends on the ink preset&rsquo;s <em>Charge mode</em> (see below). Blank pages have no ink charge.</li>
+<li><strong>Maintenance</strong> = the printer preset&rsquo;s per-page fee.</li>
+<li><strong>Finishing</strong> = your finishing fee per page.</li>
+</ul>
+<div class="box"><code>Total = (sum of page prices &times; copies, with paper counted by physical sheets + setup fee)</code></div>
+<h3>Charge modes</h3>
+<table>
+<tr><th>Mode</th><th>Ink charge per page</th></tr>
+<tr><td>Fixed price per page</td><td>Exactly the <em>Threshold</em> (B&amp;W page) or <em>Color threshold</em> (color page). Real ink use does not change the price.</td></tr>
+<tr><td>Consumption with minimum</td><td>The estimated ink cost, but never less than the Threshold / Color threshold.</td></tr>
+</table>
+<h3>Example</h3>
+<p>Paper preset &ldquo;Short (&lt;20 pages)&rdquo; (base rate 1.00) with an ink preset using <em>Fixed price</em> 1.00 B&amp;W / 2.00 color. A B&amp;W page = 1.00 + 1.00 = <strong>2.00</strong>; a color page = 1.00 + 2.00 = <strong>3.00</strong>. Ten B&amp;W pages, 1 copy, no extra fees = <strong>20.00</strong>.</p>
+
+<h2 id="presets">6. Presets</h2>
+<p>Open <strong>Settings</strong> and choose a preset type. Tap a preset to edit it, the copy icon to <strong>duplicate</strong> it, or the bin to delete it (you are asked twice).</p>
+<table>
+<tr><th>Type</th><th>Holds</th></tr>
+<tr><td>Paper</td><td>Size, pack cost, sheets, base rate (your paper price), absorption, ink limit, tier.</td></tr>
+<tr><td>Ink</td><td>Ink model, charge mode, thresholds, bottle prices and volumes, yields, calibration, maintenance and startup ink, tier.</td></tr>
+<tr><td>Printer</td><td>Brand, model, maintenance fee per page.</td></tr>
+<tr><td>Quality</td><td>DPI, ink multiplier, color density, max ink limit.</td></tr>
+</table>
+<h3>The badges in the editor</h3>
+<p>Every field shows how it takes part in the calculation, and the badges change live as you edit:</p>
+<p><span class="b g">USED IN PRICE</span> changes what the customer pays. <span class="b bl">ESTIMATE ONLY</span> changes only the ink estimate (not the price in Fixed mode). <span class="b o">SOMETIMES</span> counts only in some cases. <span class="b gr">NOT USED HERE</span> the selected ink model or mode does not use it. <span class="b gr">INFO ONLY</span> a label.</p>
+<h3>Ink models</h3>
+<table>
+<tr><th>Model</th><th>Meaning</th></tr>
+<tr><td>Manufacturer Yield</td><td>Uses the page yield on the box. Example: 65 mL &divide; 7,500 pages = 0.0087 mL per page at the reference coverage (5%). A page with 10% coverage uses twice that. An approximation.</td></tr>
+<tr><td>Reference Coverage</td><td>Same, but each color can have its own reference coverage %.</td></tr>
+<tr><td>Custom Calibration</td><td>Uses ink you measured yourself (mL per 1% coverage). Most accurate for your own setup. Estimates 0 mL until you enter values.</td></tr>
+<tr><td>Direct mL per coverage</td><td>Uses mL per cm&sup2; at 100% coverage &times; page area &times; coverage. Needs your measurements.</td></tr>
+</table>
+<p>Epson&rsquo;s published L5290 yields are black 4,500 pages and 7,500 pages (composite yield) for each of cyan, magenta and yellow. The App keeps them as published. 65 mL is the replacement <em>bottle</em> volume, not the printer&rsquo;s internal tank capacity.</p>
+
+<h2 id="setups">7. Setups and page-count tiers</h2>
+<p><strong>Setups</strong> (Settings &rarr; Setups) save a paper, ink, printer and quality preset together so you can pick them with one tap (Quick mode). A setup remembers preset <em>names</em>; if you rename a preset, pick it again in the setup.</p>
+<p><strong>Tiers</strong> (Settings &rarr; Page-count tiers) are rules like &ldquo;&lt;20 pages&rdquo; and &ldquo;20+ pages&rdquo;. You can rename them, change the limits or add your own. Give a preset or setup a Tier and the App warns you when the job does not fit it. Tiers never change prices by themselves.</p>
+
+<h2 id="store">8. Store info and currency</h2>
+<p><em>Settings &rarr; Store info &amp; currency</em>: store name (Sold by), attendant (Served by), address, contact number, email or social page, business/tax ID, and a footer message. <strong>Tick the box in front of a field</strong> to print it on receipts; unticked fields never appear.</p>
+<p>Choose your currency from the list, or pick <em>Other</em> and type a code and symbol. The App shows the symbol; receipts print the code (for example PHP) because the PDF font cannot draw many symbols.</p>
+
+<h2 id="history">9. History</h2>
+<ul>
+<li>Every calculation is saved automatically with a reference number like <code>20261001-1432-0007</code> (date, time, print number).</li>
+<li>Tap a record to make its receipt. The <strong>pencil</strong> edits and recalculates it. The <strong>bin</strong> deletes it (asked twice).</li>
+<li>The icons at the top <strong>export</strong> all records to a file and <strong>import</strong> them back. Records with a reference number that already exists are skipped.</li>
+</ul>
+
+<h2 id="receipt">10. Receipts</h2>
+<p>Tap <strong>Receipt PDF</strong> or <strong>Receipt Image</strong> (one whole tall image, so the table is never cut). A &ldquo;Preparing&hellip;&rdquo; pop-up shows while it is made, then choose <strong>Save to phone</strong> or <strong>Share</strong>. A receipt shows the reference number, date, customer, store details you ticked, the colored page table, subtotal, setup fee (only if above 0) and total. Each file name is unique, so edited receipts never overwrite old ones.</p>
+
+<h2 id="backup">11. Backup and restore</h2>
+<p><em>Settings &rarr; Export settings &amp; presets</em> lets you choose exactly what to include: store info and currency, analysis server, tiers, each preset type (or individual presets), and optionally History. <em>Import</em> reads such a file and lets you choose what to bring in, and what to do when a name already exists (keep both, skip, or replace). Back up regularly: your data lives only on your phone.</p>
+
+<h2 id="server">12. Analysis server (optional)</h2>
+<p>For more accurate coverage and Word file support you can run the included Ghostscript &ldquo;inkcov&rdquo; server on your own computer or hosting. Enter its address in <em>Settings &rarr; Analysis server</em> (for example <code>http://192.168.1.10:8000</code>) and an optional API key. Your documents are sent to that server only. Leave the address blank to stay fully on-device. If the server cannot be reached, the App falls back to the on-device estimate.</p>
+
+<h2 id="faq">13. Troubleshooting</h2>
+<table>
+<tr><th>Problem</th><th>What to check</th></tr>
+<tr><td>The price is not what I expected</td><td>Check the ink preset&rsquo;s <strong>Charge mode</strong>. With <em>Fixed price per page</em> the price ignores real ink use. Remember each page is paper + ink + maintenance + finishing. Open the details to see each part.</td></tr>
+<tr><td>The price is grey with a line</td><td>You changed something after calculating. Tap Analyze &amp; Calculate again.</td></tr>
+<tr><td>Analyze is disabled</td><td>Choose a file, a paper preset and an ink preset.</td></tr>
+<tr><td>A colored page was priced as B&amp;W</td><td>On-device detection can miss tiny colored areas. Set Color mode to <em>All Color</em>, or use an analysis server.</td></tr>
+<tr><td>Editing a record asks me to pick the file again</td><td>The original file is no longer available on the phone. Pick it again.</td></tr>
+<tr><td>Warning about tiers</td><td>The job&rsquo;s page count does not fit the preset&rsquo;s tier. Switch preset or setup, or edit the tier in Settings.</td></tr>
+<tr><td>A setup warns about a missing preset</td><td>A preset it uses was renamed or deleted. Edit the setup and choose it again.</td></tr>
+<tr><td>Currency symbol missing on the receipt</td><td>Receipts print the currency <em>code</em> on purpose.</td></tr>
+</table>
+
+<h2 id="glossary">14. Glossary</h2>
+<table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Coverage (C/M/Y/K %)</td><td>How much of a page is covered by each ink color.</td></tr>
+<tr><td>Yield</td><td>Pages a bottle prints, as published by the manufacturer.</td></tr>
+<tr><td>Reference coverage</td><td>The coverage % one yield page represents (default 5%). Editable, not universal.</td></tr>
+<tr><td>Threshold / Color threshold</td><td>The B&amp;W / color ink price (Fixed mode) or minimum charge (Consumption mode).</td></tr>
+<tr><td>Base rate</td><td>Your minimum paper price per sheet.</td></tr>
+<tr><td>Setup</td><td>A saved combination of paper, ink, printer and quality presets.</td></tr>
+<tr><td>Tier</td><td>A page-count rule such as &ldquo;&lt;20 pages&rdquo;.</td></tr>
+<tr><td>Simplex / Duplex</td><td>Printing on one side / both sides of the paper.</td></tr>
+</table>
+<div class="box warn"><strong>Limits:</strong> ink and price results are estimates. On-device coverage uses a simple RGB-to-CMYK method and is not color-managed. Presets reflect the developer&rsquo;s printer until you change them. Keep backups of your data.</div>
+</main><footer>[APP NAME] &middot; Developer: Marlou Padua &middot; Contact: <span class="ph">[YOUR EMAIL]</span></footer></body></html>
