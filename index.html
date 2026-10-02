@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation & Legal Hub - [APP NAME]</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --fg: #1c2430;
+      --mut: #5b6675;
+      --card: #f4f6fa;
+      --line: #dde2ea;
+      --acc: #1f3a5f;
+      --acc-hover: #152740;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12161c;
+        --fg: #e6eaf0;
+        --mut: #9aa6b6;
+        --card: #1a2029;
+        --line: #2a3340;
+        --acc: #7fb0ff;
+        --acc-hover: #a3c5ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: var(--acc);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 18px;
+    }
+    main {
+      max-width: 600px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .btn-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-decoration: none;
+      color: var(--fg);
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--acc);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .btn-info h2 {
+      margin: 0 0 4px;
+      font-size: 20px;
+      color: var(--acc);
+    }
+    .btn-info p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--mut);
+    }
+    .arrow {
+      font-size: 20px;
+      color: var(--acc);
+      font-weight: bold;
+    }
+    footer {
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      color: var(--mut);
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>[APP NAME]</h1>
+    <p>Help, Terms & Privacy Information</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <a href="user-manual.html" class="btn-card">
+        <div class="btn-info">
+          <h2>User Manual</h2>
+          <p>Learn how to use features, configure presets, and calculate costs.</p>
+        </div>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a href="privacy-policy.html" class="btn-card">
+        <div class="btn-info">
+          <h2>Privacy Policy</h2>
+          <p>Understand how your data and permissions are handled.</p>
+        </div>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a href="terms-of-use.html" class="btn-card">
+        <div class="btn-info">
+          <h2>Terms of Use</h2>
+          <p>Read the terms and conditions for using this application.</p>
+        </div>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> [APP NAME]. All rights reserved.
+  </footer>
+
+</body>
+</html>
