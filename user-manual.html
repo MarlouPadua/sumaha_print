@@ -19,7 +19,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h2 style="border:0;margin-top:1em">Contents</h2>
 <div class="toc">
 <a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
-<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#store">8. Store info and currency</a><br>
+<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#store">8. Store info and currency</a><br>
 <a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
 </div>
 
@@ -124,6 +124,16 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <p><strong>Setups</strong> (Settings &rarr; Setups) save a paper, ink, printer and quality preset together so you can pick them with one tap (Quick mode). A setup remembers preset <em>names</em>; if you rename a preset, pick it again in the setup.</p>
 <p><strong>Tiers</strong> (Settings &rarr; Page-count tiers) are rules like &ldquo;&lt;20 pages&rdquo; and &ldquo;20+ pages&rdquo;. You can rename them, change the limits or add your own. Give a preset or setup a Tier and the App warns you when the job does not fit it. Tiers never change prices by themselves.</p>
 
+<h2 id="ink-levels">7b. Printer ink levels (optional)</h2>
+<p>You can track how much ink is left in each color of your printer. Open your <strong>Printer preset</strong> and fill in <em>Ink tracking</em>:</p>
+<ul>
+<li><strong>Max = 100%</strong> (mL): your own 100% mark for the color, for example one full bottle. (The printer&rsquo;s internal tank size is not published, so this is your definition.)</li>
+<li><strong>Ink left</strong>: type it as <strong>mL or as %</strong>. The two boxes are linked: typing one updates the other.</li>
+<li>Leave a color blank to not track it.</li>
+<li><strong>Ink tracking</strong> mode: <em>Off</em>; <em>Manual</em> (tap <strong>Deduct ink from printer</strong> on the result after you print); <em>Automatic</em> (every calculation deducts its estimated ink).</li>
+</ul>
+<p>The main screen then shows bars with the ink left in each color (red under 15%), with <strong>Update</strong> and <strong>Refill</strong> buttons, and warns <em>Not enough ink</em> if a job needs more than what is left. If you edit and recalculate a record, its old deduction is given back first, so nothing is counted twice; <strong>Undo deduction</strong> gives it back too.</p>
+<p>Deductions use the <em>estimated</em> mL of a calculation, so the levels are estimates. Check your printer now and then and update the levels. Maintenance and startup ink are not deducted.</p>
 <h2 id="store">8. Store info and currency</h2>
 <p><em>Settings &rarr; Store info &amp; currency</em>: store name (Sold by), attendant (Served by), address, contact number, email or social page, business/tax ID, and a footer message. <strong>Tick the box in front of a field</strong> to print it on receipts; unticked fields never appear.</p>
 <p>Choose your currency from the list, or pick <em>Other</em> and type a code and symbol. The App shows the symbol; receipts print the code (for example PHP) because the PDF font cannot draw many symbols.</p>
