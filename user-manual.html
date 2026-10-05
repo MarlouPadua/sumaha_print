@@ -19,7 +19,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h2 style="border:0;margin-top:1em">Contents</h2>
 <div class="toc">
 <a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
-<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#store">8. Store info and currency</a><br>
+<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#store">8. Store info and currency</a><br>
 <a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
 </div>
 
@@ -134,6 +134,17 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 </ul>
 <p>The main screen then shows bars with the ink left in each color (red under 15%), with <strong>Update</strong> and <strong>Refill</strong> buttons, and warns <em>Not enough ink</em> if a job needs more than what is left. If you edit and recalculate a record, its old deduction is given back first, so nothing is counted twice; <strong>Undo deduction</strong> gives it back too.</p>
 <p>Deductions use the <em>estimated</em> mL of a calculation, so the levels are estimates. Check your printer now and then and update the levels. Maintenance and startup ink are not deducted.</p>
+<h2 id="calibrate">7c. Ink log and calibration</h2>
+<p>Estimates drift from real use. To fix that, compare the <em>real</em> level in the tank with what the app estimated. On the main screen tap <strong>Ink log &amp; calibrate</strong> (shown when the printer has levels).</p>
+<ol>
+<li><strong>Refill / start</strong>: when you fill the tank or set a level, add an entry (date, time and the level of each color, in mL or %).</li>
+<li>Print as usual. Each calculation is saved in History.</li>
+<li><strong>Actual reading</strong>: later, look at the tank and add what you really see. The newest entry is the current baseline; ink already deducted for prints made after it is taken off again.</li>
+<li><strong>Calibrate from the log</strong>: pick a start and an end entry. The app lists the History prints of that printer in between (untick quotes or tests), and for each color shows the <em>actual</em> drop, the <em>estimated</em> use and the <em>factor</em> (actual &divide; estimated).</li>
+<li>Tick the colors to recalibrate (one, several or all) and tap <strong>Create calibrated preset</strong>.</li>
+</ol>
+<p>The app makes a <strong>copy</strong> of the ink preset that uses the <em>Custom Calibration</em> model (mL per 1% coverage = the old value &times; factor; colors you did not tick keep the old value), plus copies of the setups that used the old ink preset. Your originals are never changed. Tick <em>Charge by consumption</em> if you want the calibrated usage to change the price (Fixed price ignores ink use).</p>
+<p>Every manual change to the levels is logged per color, and an entry&rsquo;s menu has <em>Undo change for colors&hellip;</em>. For a reliable calibration use many prints, with the same paper and quality, and a drop of at least a few percent of the tank (the app warns under 3%).</p>
 <h2 id="store">8. Store info and currency</h2>
 <p><em>Settings &rarr; Store info &amp; currency</em>: store name (Sold by), attendant (Served by), address, contact number, email or social page, business/tax ID, and a footer message. <strong>Tick the box in front of a field</strong> to print it on receipts; unticked fields never appear.</p>
 <p>Choose your currency from the list, or pick <em>Other</em> and type a code and symbol. The App shows the symbol; receipts print the code (for example PHP) because the PDF font cannot draw many symbols.</p>
