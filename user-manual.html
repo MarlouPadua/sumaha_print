@@ -19,7 +19,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h2 style="border:0;margin-top:1em">Contents</h2>
 <div class="toc">
 <a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
-<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#store">8. Store info and currency</a><br>
+<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#paper-stock">7d. Paper stock</a><br><a href="#store">8. Store info and currency</a><br>
 <a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
 </div>
 
@@ -146,6 +146,15 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 </ol>
 <p>The app makes a <strong>copy</strong> of the ink preset that uses the <em>Custom Calibration</em> model (mL per 1% coverage = the old value &times; factor; colors you did not tick keep the old value), plus copies of the setups that used the old ink preset. Your originals are never changed. Tick <em>Charge by consumption</em> if you want the calibrated usage to change the price (Fixed price ignores ink use).</p>
 <p>Every manual change to the levels is logged per color, and an entry&rsquo;s menu has <em>Undo change for colors&hellip;</em>. For a reliable calibration use many prints, with the same paper and quality, and a drop of at least a few percent of the tank (the app warns under 3%).</p>
+<h2 id="paper-stock">7d. Paper stock (optional)</h2>
+<p>Each <strong>Paper preset</strong> can count the sheets you have left. In the preset, open <em>Paper stock</em> and set:</p>
+<ul>
+<li><strong>Sheets left</strong>: how many sheets you have now. Blank = not tracked.</li>
+<li><strong>Stock tracking</strong>: <em>Off</em>; <em>Manual</em> (tap <strong>Deduct paper from stock</strong> on the result after you print); <em>Automatic</em> (every calculation deducts its sheets).</li>
+<li><strong>Low stock alert</strong>: at or below this number the stock turns red.</li>
+</ul>
+<p>A job takes off the <em>physical sheets</em> it uses: copies are included and duplex counts two pages per sheet. With <em>Print after analyzing</em>, a job that was really printed deducts its sheets; a job saved as &ldquo;not printed&rdquo; deducts nothing. <strong>Undo paper deduction</strong> gives the sheets back, and editing and recalculating a record gives its old sheets back first, so nothing is counted twice.</p>
+<p>On the main screen the paper card shows the sheets left with <strong>Add stock</strong> (default = one pack), <strong>Count</strong> (set the exact number) and <strong>Log</strong> (every change, each can be undone). The app warns <em>Not enough paper</em> before you calculate if the job needs more sheets than are left. Deleting a History record does not give its sheets back.</p>
 <h2 id="store">8. Store info and currency</h2>
 <p><em>Settings &rarr; Store info &amp; currency</em>: store name (Sold by), attendant (Served by), address, contact number, email or social page, business/tax ID, and a footer message. <strong>Tick the box in front of a field</strong> to print it on receipts; unticked fields never appear.</p>
 <p>Choose your currency from the list, or pick <em>Other</em> and type a code and symbol. The App shows the symbol; receipts print the code (for example PHP) because the PDF font cannot draw many symbols.</p>
