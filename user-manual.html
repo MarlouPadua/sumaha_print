@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>User Manual - [APP NAME]</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>User Manual - Sumaha Print</title><style>
 :root{--bg:#fff;--fg:#1c2430;--mut:#5b6675;--card:#f4f6fa;--line:#dde2ea;--acc:#1f3a5f;--acc2:#2e7d32;--warn:#fff4d6;--warnb:#e0b341}
 @media (prefers-color-scheme:dark){:root{--bg:#12161c;--fg:#e6eaf0;--mut:#9aa6b6;--card:#1a2029;--line:#2a3340;--acc:#7fb0ff;--acc2:#81c784;--warn:#3a3114;--warnb:#a98316}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -14,7 +14,8 @@ code{background:var(--card);padding:1px 5px;border-radius:4px;font-size:90%}.toc
 .b{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:700;margin-right:4px}.g{background:#43a04722;color:var(--acc2)}.bl{background:#1e88e522;color:var(--acc)}.o{background:#fb8c0022;color:#e65100}.gr{background:#75757522;color:var(--mut)}
 footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
 @media(max-width:600px){.toc{columns:1}header h1{font-size:23px}}
-</style></head><body><header><div class="in"><h1>User Manual</h1><p>How to use [APP NAME]</p></div></header><nav><div class="in"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="user-manual.html" class="on">User Manual</a></div></nav><main>
+</style></head><body><header><div class="in"><h1>User Manual</h1><p>How to use Sumaha Print</p></div></header><nav><div class="in"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="user-manual.html" class="on">User Manual</a></div></nav><main>
+<p><strong>Sumaha Print</strong> helps you price print jobs. Choose files, choose your presets, and the App estimates the ink, adds paper and fees, shows the final price, saves it to History and makes a receipt. It can also print the job, and keep track of the ink and paper you have left.</p>
 <div class="box warn"><strong>Before you start:</strong> the ready-made presets are set up for the developer&rsquo;s printer (Epson EcoTank L5290, Epson 003 ink) and the developer&rsquo;s prices. Change <strong>all presets</strong> to match your own printer, ink, paper and prices (Settings), or the results will not match your business.</div>
 <h2 style="border:0;margin-top:1em">Contents</h2>
 <div class="toc">
@@ -40,7 +41,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 
 <h2 id="main">3. The main screen</h2>
 <h3>3.1 Choose and clear a file</h3>
-<p>Tap <strong>Choose files</strong> and pick as many files as you like: PDFs and images (PNG, JPG, WEBP, BMP, GIF, TIFF). <strong>Add</strong> appends more files, <strong>Clear</strong> removes them all and the result. The file list shows each file&rsquo;s pages; drag a file to reorder it or tap its X to remove it. Pages are counted across the files in that order, so <em>Target pages</em> and <em>Select pages</em> cover everything together. A Word file (needs an analysis server) can only be used on its own.</p>
+<p>The main screen has three numbered steps: <strong>1 Files</strong>, <strong>2 Presets</strong> and <strong>3 Pages &amp; options</strong>. The big <strong>Analyze &amp; Calculate</strong> button stays at the bottom of the screen so you never have to scroll for it. Tap the empty box in step 1 (or <strong>Change</strong>) and pick as many files as you like: PDFs and images (PNG, JPG, WEBP, BMP, GIF, TIFF). <strong>Add</strong> appends more files, <strong>Clear</strong> removes them all and the result. The file list shows each file&rsquo;s pages; drag a file to reorder it or tap its X to remove it. Pages are counted across the files in that order, so <em>Target pages</em> and <em>Select pages</em> cover everything together. A Word file (needs an analysis server) can only be used on its own.</p>
 <h3>3.2 Presets</h3>
 <ul>
 <li><strong>Quick</strong>: pick one <em>setup</em> (a saved combination of paper + ink + printer + quality).</li>
@@ -49,6 +50,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <li>An amber <strong>warning</strong> appears if the page count does not fit the tier of the selected presets, or the paper and ink tiers differ. It can offer to switch to a matching setup.</li>
 </ul>
 <h3>3.3 Pages and options</h3>
+<p>The everyday options (Target pages, Copies, Print sides, Customer, Print after analyzing) are always visible. <strong>Finishing fee</strong> and <strong>Setup fee</strong> are under <em>Fees &amp; extras</em>; <strong>Color mode</strong>, <strong>Analysis source</strong> and <strong>startup ink</strong> are under <em>Advanced</em>. Both sections are closed by default and show a one-line summary of their current values.</p>
 <table>
 <tr><th>Option</th><th>What it does</th></tr>
 <tr><td>Target pages</td><td><code>ALL</code>, a range <code>1-5</code>, or a list <code>1, 3, 7</code>, or <code>2-10, 15</code>. Only these pages are calculated.</td></tr>
@@ -65,7 +67,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 </table>
 <p>Every option has an <strong>(i)</strong> button with a short explanation.</p>
 <h3>3.4 Analyze &amp; Calculate</h3>
-<p>The button stays disabled until a file, a paper preset and an ink preset are chosen. While it works, a screen shows <em>Analyzing page X of N</em> and everything is paused. Each calculation is saved to <strong>History</strong> automatically with a reference number.</p>
+<p>The button at the bottom stays disabled until a file, a paper preset and an ink preset are chosen. While it works, a screen shows <em>Analyzing page X of N</em> and everything is paused. Each calculation is saved to <strong>History</strong> automatically with a reference number.</p>
 <h3>3.5 Editing a History record</h3>
 <p>Tap the pencil on a History record. An amber banner appears. Change what was wrong, pick the file again if asked, and tap Analyze &amp; Calculate. The same record (and reference number) is updated.</p>
 <p>The App also remembers the screen: when you close and reopen it, your presets, fields and last result are back.</p>
@@ -201,4 +203,4 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <tr><td>Simplex / Duplex</td><td>Printing on one side / both sides of the paper.</td></tr>
 </table>
 <div class="box warn"><strong>Limits:</strong> ink and price results are estimates. On-device coverage uses a simple RGB-to-CMYK method and is not color-managed. Presets reflect the developer&rsquo;s printer until you change them. Keep backups of your data.</div>
-</main><footer>[APP NAME] &middot; Developer: Marlou Padua &middot; Contact: <span class="ph">[YOUR EMAIL]</span></footer></body></html>
+</main><footer>Sumaha Print &middot; Developer: Marlou Padua &middot; Contact: <span class="ph">marloupadua555678@gmail.com</span></footer></body></html>
