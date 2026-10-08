@@ -21,7 +21,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <div class="toc">
 <a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
 <a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#paper-stock">7d. Paper stock</a><br><a href="#store">8. Store info and currency</a><br>
-<a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
+<a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#customer">11b. Customer price file</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
 </div>
 
 <h2 id="quick">1. Quick start</h2>
@@ -171,9 +171,20 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h2 id="receipt">10. Receipts</h2>
 <p>Tap <strong>Receipt PDF</strong> or <strong>Receipt Image</strong> (one whole tall image, so the table is never cut). A &ldquo;Preparing&hellip;&rdquo; pop-up shows while it is made, then choose <strong>Save to phone</strong> or <strong>Share</strong>. A receipt shows the reference number, date, customer, store details you ticked, the colored page table, subtotal, setup fee (only if above 0) and total. Each file name is unique, so edited receipts never overwrite old ones.</p>
 
-<h2 id="backup">11. Backup and restore</h2>
-<p><em>Settings &rarr; Export settings &amp; presets</em> lets you choose exactly what to include: store info and currency, analysis server, tiers, each preset type (or individual presets), and optionally History. <em>Import</em> reads such a file and lets you choose what to bring in, and what to do when a name already exists (keep both, skip, or replace). Back up regularly: your data lives only on your phone.</p>
-
+<h2 id="backup">11. Backup and restore (encrypted)</h2>
+<p><em>Settings &rarr; Export backup (encrypted)</em> saves a <code>.sprint</code> file. It is encrypted (AES-256), so it cannot be read in a text editor and opens only in Sumaha Print. Add a <strong>password</strong> for much stronger protection: without it, nobody can open the file; if you forget it, the file cannot be recovered.</p>
+<p>You choose exactly what goes in: store info and currency, the analysis server, page-count tiers, each preset type (or individual presets) including setups, History records, the <strong>ink log and paper stock log</strong>, the <strong>signing key</strong>, and whether to keep your <strong>current ink levels and paper stock counts</strong>.</p>
+<p>The file name tells you what is inside, for example <code>sumahaprint_backup_LuzStore_20261008-143012_6setups-9paper-8ink-1printer-4quality-25history_locked.sprint</code> (&ldquo;locked&rdquo; = password-protected).</p>
+<p><em>Import backup</em> opens a <code>.sprint</code> file (older unencrypted backups still work), asks for the password if needed, and lets you choose what to bring in and what to do when a name already exists (keep both, skip, or replace). Logs are matched to your printer and paper presets by name.</p>
+<h2 id="customer">11b. Customer price file and the Customer page</h2>
+<p>Sellers can give customers their prices without giving away the setup. <em>Settings &rarr; Export customer price file (signed)</em> creates an encrypted, <strong>signed</strong> <code>.sprice</code> file. Choose the store details to show, the presets and setups to include, and what the customer may see and change (pages, copies, sides, color mode, price breakdown, analysis details, page table). You can set fixed finishing and setup fees, a message, a default color mode and sides, and how many days the file stays valid.</p>
+<p>A price file <strong>cannot be imported</strong>. It opens only on the <strong>Customer page</strong>: on the main screen tap <strong>I&rsquo;m a customer</strong> beside <em>Presets</em>, then <em>Open price file</em>.</p>
+<ul>
+<li>The page checks the shop&rsquo;s signature. If the file was changed, it is refused. It shows the shop&rsquo;s name and a short <strong>Key ID</strong>; the seller can share their Key ID so customers can compare.</li>
+<li>The customer adds files, picks an option, and taps <strong>Calculate my price</strong>. The page shows only what the seller allowed: <strong>You pay</strong>, optionally the breakdown, <em>Analysis details</em> (pages, sheets, coverage; never ink formulas, bottle prices or minimums) and the page-by-page table.</li>
+<li>The customer can save or share an <strong>Invoice PDF</strong> or <strong>Invoice Image</strong>. Nothing is saved to the shop&rsquo;s History.</li>
+</ul>
+<p><strong>Good to know:</strong> without a password the encryption key is built into the app, so the files stop casual reading and editing but are not secret from someone who reverse-engineers the app. Use a password for anything sensitive. The signature proves the file was not changed after the seller signed it; it cannot prove who the seller is, so customers should compare the Key ID with the shop.</p>
 <h2 id="server">12. Analysis server (optional)</h2>
 <p>For more accurate coverage and Word file support you can run the included Ghostscript &ldquo;inkcov&rdquo; server on your own computer or hosting. Enter its address in <em>Settings &rarr; Analysis server</em> (for example <code>http://192.168.1.10:8000</code>) and an optional API key. Your documents are sent to that server only. Leave the address blank to stay fully on-device. If the server cannot be reached, the App falls back to the on-device estimate.</p>
 
@@ -203,4 +214,4 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <tr><td>Simplex / Duplex</td><td>Printing on one side / both sides of the paper.</td></tr>
 </table>
 <div class="box warn"><strong>Limits:</strong> ink and price results are estimates. On-device coverage uses a simple RGB-to-CMYK method and is not color-managed. Presets reflect the developer&rsquo;s printer until you change them. Keep backups of your data.</div>
-</main><footer>Sumaha Print &middot; Developer: Marlou Padua &middot; Contact: <span class="ph">marloupadua555678@gmail.com</span></footer></body></html>
+</main><footer>Sumaha Print &middot; Developer: Marlou Padua &middot; Contact: <span class="ph">[YOUR EMAIL]</span></footer></body></html>
