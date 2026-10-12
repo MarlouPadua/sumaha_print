@@ -20,7 +20,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h2 style="border:0;margin-top:1em">Contents</h2>
 <div class="toc">
 <a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
-<a href="#price">5. How the price is calculated</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#paper-stock">7d. Paper stock</a><br><a href="#store">8. Store info and currency</a><br>
+<a href="#price">5. How the price is calculated</a><br><a href="#rounding">5b. Price rounding</a><br><a href="#pagesize">5c. Page size and ink</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#paper-stock">7d. Paper stock</a><br><a href="#store">8. Store info and currency</a><br>
 <a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#customer">11b. Customer price file</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
 </div>
 
@@ -101,6 +101,11 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h3>Example</h3>
 <p>Paper preset &ldquo;Short (&lt;20 pages)&rdquo; (base rate 1.00) with an ink preset using <em>Fixed price</em> 1.00 B&amp;W / 2.00 color. A B&amp;W page = 1.00 + 1.00 = <strong>2.00</strong>; a color page = 1.00 + 2.00 = <strong>3.00</strong>. Ten B&amp;W pages, 1 copy, no extra fees = <strong>20.00</strong>.</p>
 
+<h2 id="rounding">5b. Price rounding (optional)</h2>
+<p><em>Settings &rarr; Price rounding</em> rounds the <strong>final price</strong> to a number you like. It is off by default. Choose what to round to (0.01, 0.05, 0.10, 0.25, 0.50, 1, 5, 10, or your own step) and how: <em>to the nearest</em> (half or more goes up), <em>always up</em>, <em>always down</em>, or <em>up only past my own limit</em> (for example step 1 and limit 0.25: 12.24 becomes 12, 12.25 becomes 13). Examples update as you change the settings.</p>
+<p>When it is on it applies everywhere an amount is shown: the calculator (&ldquo;Rounded from &hellip;&rdquo; appears under the price), receipts and invoices (a <em>Rounding</em> line), History totals, sales, and the Customer page. A customer price file carries the seller&rsquo;s own rounding rule, so a customer sees the same total as the shop.</p>
+<h2 id="pagesize">5c. Page size and ink</h2>
+<p>A bigger page carries more ink at the same coverage %. Ink presets have a <strong>Reference page size</strong>: the size the yields (or your calibration) were measured on. Epson publishes yields on A4. When it is set, other paper sizes scale the ink estimate by page area, so a Long page (8.5 x 13 in) uses about 14% more than A4, and a Short page about 3% less. Leave it blank for no scaling. The Direct model already uses the page area. The ready-made ink presets use A4, and a calibrated copy records the paper size of the prints it was calibrated on. The scaling only changes the <em>price</em> when the ink preset charges by consumption.</p>
 <h2 id="presets">6. Presets</h2>
 <p>Open <strong>Settings</strong> and choose a preset type. Tap a preset to edit it, the copy icon to <strong>duplicate</strong> it, or the bin to delete it (you are asked twice).</p>
 <table>
@@ -171,6 +176,17 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <h2 id="receipt">10. Receipts</h2>
 <p>Tap <strong>Receipt PDF</strong> or <strong>Receipt Image</strong> (one whole tall image, so the table is never cut). A &ldquo;Preparing&hellip;&rdquo; pop-up shows while it is made, then choose <strong>Save to phone</strong> or <strong>Share</strong>. A receipt shows the reference number, date, customer, store details you ticked, the colored page table, subtotal, setup fee (only if above 0) and total. Each file name is unique, so edited receipts never overwrite old ones.</p>
 
+<h2 id="sales">10b. Sales</h2>
+<p>History keeps every calculation. <strong>Sales</strong> records what a customer actually pays. Open it with the <strong>cash-register icon</strong> in the top bar, or tap <strong>Create sale</strong> under a result (you can start a new sale or add the result to an open one).</p>
+<ul>
+<li><strong>Items</strong>: add as many calculations as you want (<em>From History</em>) and manual items such as lamination, binding or photo paper (with quantity, unit price and your cost). Tap the pencil to edit a manual item, the X to remove one.</li>
+<li><strong>Discount</strong> in money or percent, and the <strong>rounding</strong> rule you set, give the <strong>TOTAL DUE</strong>.</li>
+<li><strong>Price paid by customer</strong>: type what was paid (or tap <em>Exact</em>) and pick the method (cash, GCash, Maya, bank transfer, card, other). The sale shows <em>Change to give</em> or <em>Balance due</em>. You can add more payments later for partly paid sales.</li>
+<li>Status is <strong>Paid</strong>, <strong>Partial</strong>, <strong>Unpaid</strong> or <strong>Void</strong>. Void keeps the record but leaves it out of the totals.</li>
+<li><strong>Receipt PDF / image</strong> for the whole sale, with every item, payments and the balance.</li>
+<li>The Sales list shows totals (sales, collected, to collect, estimated profit), search, status and period filters, and <strong>CSV export</strong>. Estimated profit = total minus the estimated ink and paper cost of print items (and any cost you enter for manual items).</li>
+<li>Every delete asks twice. Sales are included in the encrypted backup.</li>
+</ul>
 <h2 id="backup">11. Backup and restore (encrypted)</h2>
 <p><em>Settings &rarr; Export backup (encrypted)</em> saves a <code>.sprint</code> file. It is encrypted (AES-256), so it cannot be read in a text editor and opens only in Sumaha Print. Add a <strong>password</strong> for much stronger protection: without it, nobody can open the file; if you forget it, the file cannot be recovered.</p>
 <p>You choose exactly what goes in: store info and currency, the analysis server, page-count tiers, each preset type (or individual presets) including setups, History records, the <strong>ink log and paper stock log</strong>, the <strong>signing key</strong>, and whether to keep your <strong>current ink levels and paper stock counts</strong>.</p>
@@ -180,6 +196,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14p
 <p>Sellers can give customers their prices without giving away the setup. <em>Settings &rarr; Export customer price file (signed)</em> creates an encrypted, <strong>signed</strong> <code>.sprice</code> file. Choose the store details to show, the presets and setups to include, and what the customer may see and change (pages, copies, sides, color mode, price breakdown, analysis details, page table). You can set fixed finishing and setup fees, a message, a default color mode and sides, and how many days the file stays valid.</p>
 <p>A price file <strong>cannot be imported</strong>. It opens only on the <strong>Customer page</strong>: on the main screen tap <strong>I&rsquo;m a customer</strong> beside <em>Presets</em>, then <em>Open price file</em>.</p>
 <ul>
+<li>After a password-protected file has been opened once, the page remembers it on that phone: it does not ask for the password again until you remove the price file (<em>Remove this price file</em>).</li>
 <li>The page checks the shop&rsquo;s signature. If the file was changed, it is refused. It shows the shop&rsquo;s name and a short <strong>Key ID</strong>; the seller can share their Key ID so customers can compare.</li>
 <li>The customer adds files, picks an option, and taps <strong>Calculate my price</strong>. The page shows only what the seller allowed: <strong>You pay</strong>, optionally the breakdown, <em>Analysis details</em> (pages, sheets, coverage; never ink formulas, bottle prices or minimums) and the page-by-page table.</li>
 <li>The customer can save or share an <strong>Invoice PDF</strong> or <strong>Invoice Image</strong>. Nothing is saved to the shop&rsquo;s History.</li>
