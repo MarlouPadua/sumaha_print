@@ -1,241 +1,179 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>User Manual - Sumaha Print</title><style>
-:root{--bg:#fff;--fg:#1c2430;--mut:#5b6675;--card:#f4f6fa;--line:#dde2ea;--acc:#1f3a5f;--acc2:#2e7d32;--warn:#fff4d6;--warnb:#e0b341}
-@media (prefers-color-scheme:dark){:root{--bg:#12161c;--fg:#e6eaf0;--mut:#9aa6b6;--card:#1a2029;--line:#2a3340;--acc:#7fb0ff;--acc2:#81c784;--warn:#3a3114;--warnb:#a98316}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-header{background:var(--acc);color:#fff;padding:28px 20px}header .in,main{max-width:880px;margin:0 auto}
-header h1{margin:0 0 4px;font-size:28px}header p{margin:0;opacity:.9}
-nav{background:var(--card);border-bottom:1px solid var(--line)}nav .in{max-width:880px;margin:0 auto;padding:10px 20px;display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:var(--acc);text-decoration:none;font-weight:600}nav a.on{border-bottom:2px solid var(--acc)}
-main{padding:24px 20px 60px}h2{margin-top:2em;padding-top:.4em;border-top:1px solid var(--line);font-size:22px;color:var(--acc)}h3{margin-top:1.4em;font-size:17px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:16px 0}.warn{background:var(--warn);border-color:var(--warnb)}
-.ph{background:#ffe08a;color:#222;padding:0 4px;border-radius:3px;font-weight:600}
-table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
-code{background:var(--card);padding:1px 5px;border-radius:4px;font-size:90%}.toc{columns:2;column-gap:30px}.toc a{color:var(--acc);text-decoration:none}
-.b{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:700;margin-right:4px}.g{background:#43a04722;color:var(--acc2)}.bl{background:#1e88e522;color:var(--acc)}.o{background:#fb8c0022;color:#e65100}.gr{background:#75757522;color:var(--mut)}
-footer{max-width:880px;margin:0 auto;padding:20px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
-@media(max-width:600px){.toc{columns:1}header h1{font-size:23px}}
-</style></head><body><header><div class="in"><h1>User Manual</h1><p>How to use Sumaha Print</p></div></header><nav><div class="in"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="user-manual.html" class="on">User Manual</a></div></nav><main>
-<p><strong>Sumaha Print</strong> helps you price print jobs. Choose files, choose your presets, and the App estimates the ink, adds paper and fees, shows the final price, saves it to History and makes a receipt. It can also print the job, and keep track of the ink and paper you have left.</p>
-<div class="box warn"><strong>Before you start:</strong> the ready-made presets are set up for the developer&rsquo;s printer (Epson EcoTank L5290, Epson 003 ink) and the developer&rsquo;s prices. Change <strong>all presets</strong> to match your own printer, ink, paper and prices (Settings), or the results will not match your business.</div>
-<h2 style="border:0;margin-top:1em">Contents</h2>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>User Manual - Sumaha Print</title><style>
+:root{--bg:#f4f5fa;--card:#fff;--text:#1c1e2b;--muted:#5b6075;--accent:#3949ab;--line:#dfe2ee;--note:#fff4e0;--noteb:#e69100;--tip:#e8ecff}
+@media (prefers-color-scheme:dark){:root{--bg:#14151c;--card:#1d1f2b;--text:#e8e9f1;--muted:#a3a8bd;--accent:#9fa8f5;--line:#2c2f40;--note:#3a2d12;--noteb:#e69100;--tip:#232846}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--accent);color:#fff;padding:28px 20px}
+header .in,main,footer{max-width:860px;margin:0 auto}
+header h1{margin:0 0 4px;font-size:1.7rem}header p{margin:0;opacity:.9}
+nav.top{max-width:860px;margin:0 auto;padding:12px 20px 0;display:flex;gap:14px;flex-wrap:wrap;font-size:.92rem}
+nav.top a{color:var(--accent);text-decoration:none;font-weight:600}
+main{padding:12px 20px 40px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 20px 14px;margin:14px 0}
+h2{font-size:1.2rem;margin:16px 0 6px;color:var(--accent)}h3{font-size:1.02rem;margin:14px 0 4px}
+p,li{color:var(--text)}ul,ol{padding-left:22px}li{margin:3px 0}
+.muted{color:var(--muted)}
+.note{background:var(--note);border-left:4px solid var(--noteb);padding:10px 14px;border-radius:6px;margin:12px 0}
+.tip{background:var(--tip);border-left:4px solid var(--accent);padding:10px 14px;border-radius:6px;margin:12px 0}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}th{background:var(--tip)}
+code{background:var(--tip);padding:1px 5px;border-radius:4px;font-size:.92em}
+.toc{columns:2;column-gap:24px}.toc a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.toc{columns:1}}
+footer{padding:10px 20px 40px;color:var(--muted);font-size:.9rem}
+a{color:var(--accent)}
+</style></head><body>
+<header><div class="in"><h1>User Manual</h1><p>Sumaha Print · Shop and Customer modes</p></div></header>
+<nav class="top"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="user-manual.html">User Manual</a></nav>
+<main>
+
+<section><h2>Contents</h2>
 <div class="toc">
-<a href="#quick">1. Quick start</a><br><a href="#welcome">2. First launch</a><br><a href="#main">3. The main screen</a><br><a href="#results">4. Reading the results</a><br>
-<a href="#price">5. How the price is calculated</a><br><a href="#rounding">5b. Price rounding</a><br><a href="#pagesize">5c. Page size and ink</a><br><a href="#presets">6. Presets</a><br><a href="#setups">7. Setups and page-count tiers</a><br><a href="#ink-levels">7b. Printer ink levels</a><br><a href="#calibrate">7c. Ink log and calibration</a><br><a href="#paper-stock">7d. Paper stock</a><br><a href="#print-time">7e. Print time</a><br><a href="#store">8. Store info and currency</a><br>
-<a href="#history">9. History</a><br><a href="#receipt">10. Receipts</a><br><a href="#backup">11. Backup and restore</a><br><a href="#customer">11b. Customer price file</a><br><a href="#server">12. Analysis server (optional)</a><br><a href="#faq">13. Troubleshooting</a><br><a href="#glossary">14. Glossary</a>
-</div>
+<a href="#start">1. Getting started</a><br><a href="#shop">2. Shop mode: the main screen</a><br><a href="#result">3. Reading the result</a><br>
+<a href="#rounding">4. Price rounding</a><br><a href="#receipts">5. Receipts, sales and history</a><br><a href="#stock">6. Ink and paper tracking</a><br>
+<a href="#settings">7. Settings</a><br><a href="#presets">8. Presets in detail</a><br><a href="#backup">9. Backup, import and customer files</a><br>
+<a href="#customer">10. Customer mode</a><br><a href="#tips">11. Tips and troubleshooting</a><br><a href="#contact">12. Contact</a>
+</div></section>
 
-<h2 id="quick">1. Quick start</h2>
+<section id="start"><h2>1. Getting started</h2>
 <ol>
-<li>Open <strong>Settings</strong> and check your presets (paper, ink, printer, quality). Edit them to match your shop.</li>
-<li>Go to <strong>Settings &rarr; Store info &amp; currency</strong> and enter your store name and currency. Tick the details you want on receipts.</li>
-<li>On the main screen tap <strong>Choose file</strong> and pick a PDF or image.</li>
-<li>Choose your presets (Quick: one setup, or Custom: each preset).</li>
-<li>Set pages, copies and options, then tap <strong>Analyze &amp; Calculate</strong>.</li>
-<li>Read the <strong>Final Price</strong>, then tap <strong>Receipt PDF</strong> or <strong>Receipt Image</strong>.</li>
+<li><strong>Choose your mode.</strong> The first time you open the App it asks how you will use it: <strong>Shop Owner</strong> (you run a print shop) or <strong>Customer</strong> (you want to check a price). You can switch later: Shop to Customer in Settings, Customer to Shop with the storefront button at the top of the Customer screen. Nothing is deleted when you switch.</li>
+<li><strong>Shop owners:</strong> pick <em>ready-made presets</em> (a working starting point) or <em>start clean</em>. Then change the presets to match your own printer, ink, paper and prices.</li>
+<li><strong>Quick tour.</strong> A short tutorial opens the first time each mode starts. Replay it from Settings → Help &amp; about → Tutorial (Shop) or the help button (Customer).</li>
 </ol>
+<div class="note">The ready-made presets reflect the Prompter's own printer (Epson EcoTank L5290, Epson 003 ink, Philippines). <strong>Change them to yours before trusting results.</strong></div></section>
 
-<h2 id="welcome">2. First launch</h2>
-<p>The first time you open the App you choose how to start:</p>
-<ul><li><strong>Start with ready-made presets</strong>: loads the developer&rsquo;s presets, an ink preset for every ink model and charge mode, and ready-made setups.</li><li><strong>Start empty</strong>: no presets. Create your own in Settings.</li></ul>
-<p>You can change your mind later: <em>Settings &rarr; Add ready-made presets</em> or <em>Delete all presets</em>.</p>
-
-<h2 id="main">3. The main screen</h2>
-<h3>3.1 Choose and clear a file</h3>
-<p>The main screen has three numbered steps: <strong>1 Files</strong>, <strong>2 Presets</strong> and <strong>3 Pages &amp; options</strong>. The big <strong>Analyze &amp; Calculate</strong> button stays at the bottom of the screen so you never have to scroll for it. Tap the empty box in step 1 (or <strong>Change</strong>) and pick as many files as you like: PDFs and images (PNG, JPG, WEBP, BMP, GIF, TIFF). <strong>Add</strong> appends more files, <strong>Clear</strong> removes them all and the result. The file list shows each file&rsquo;s pages; drag a file to reorder it or tap its X to remove it. Pages are counted across the files in that order, so <em>Target pages</em> and <em>Select pages</em> cover everything together. A Word file (needs an analysis server) can only be used on its own.</p>
-<h3>3.2 Presets</h3>
+<section id="shop"><h2>2. Shop mode: the main screen</h2>
+<h3>Files</h3>
+<p>Tap <strong>Browse</strong> and choose a PDF, images, or a Word file. Pages are counted automatically. Use <strong>Add</strong> to put more files in the same job, hold and drag in "Files in this job" to reorder, <strong>Change</strong> to replace, and <strong>X</strong> to remove. A Word file must be used on its own.</p>
+<h3>Presets</h3>
 <ul>
-<li><strong>Quick</strong>: pick one <em>setup</em> (a saved combination of paper + ink + printer + quality).</li>
-<li><strong>Custom</strong>: pick each preset yourself. The switch appears once you have at least one setup.</li>
-<li>A grey box shows what the selected presets mean (paper size and charge, ink fixed price or minimums, quality).</li>
-<li>An amber <strong>warning</strong> appears if the page count does not fit the tier of the selected presets, or the paper and ink tiers differ. It can offer to switch to a matching setup.</li>
+<li><strong>Quick:</strong> choose one saved <em>setup</em> (paper + ink + printer + quality). This is the fastest way.</li>
+<li><strong>Custom:</strong> choose the paper, ink, printer and quality separately. Switching modes keeps what you chose.</li>
 </ul>
-<h3>3.3 Pages and options</h3>
-<p>The everyday options (Target pages, Copies, Print sides, Customer, Print after analyzing) are always visible. <strong>Finishing fee</strong> and <strong>Setup fee</strong> are under <em>Fees &amp; extras</em>; <strong>Color mode</strong>, <strong>Analysis source</strong> and <strong>startup ink</strong> are under <em>Advanced</em>. Both sections are closed by default and show a one-line summary of their current values.</p>
-<table>
-<tr><th>Option</th><th>What it does</th></tr>
-<tr><td>Target pages</td><td><code>ALL</code>, a range <code>1-5</code>, or a list <code>1, 3, 7</code>, or <code>2-10, 15</code>. Only these pages are calculated.</td></tr>
-<tr><td>Select pages</td><td>Shows every PDF page as a thumbnail. Tap to select or deselect. <strong>Long-press</strong> a page to see it full screen (pinch to zoom, tap <strong>X</strong> to close). Use All / None, then Done.</td></tr>
-<tr><td>Copies</td><td>How many copies of the selected pages.</td></tr>
-<tr><td>Print sides</td><td><strong>Simplex</strong>: one side per sheet. <strong>Duplex</strong>: both sides, 2 pages per sheet. Paper counts physical sheets (10 pages duplex = 5 sheets); ink counts all 10 printed pages.</td></tr>
-<tr><td>Color mode</td><td><strong>Auto-detect</strong>: colored pages are priced as Color, others as B&amp;W, blank pages get no ink charge. <strong>All B&amp;W</strong> or <strong>All Color</strong> forces the type.</td></tr>
-<tr><td>Analysis source</td><td><strong>Auto</strong> (server if set), <strong>Ghostscript server</strong>, or <strong>Naive RGB (on-device)</strong>, a faster, less accurate estimate on the phone.</td></tr>
-<tr><td>Finishing fee per page</td><td>Extra fee <em>per page</em> for manual work: trimming, stapling, binding, laminating. Added to every page. Use 0 if none.</td></tr>
-<tr><td>Setup fee</td><td>One-time fee for the whole order (downloading, editing, layout). Hidden on the receipt when 0.</td></tr>
-<tr><td>Customer (optional)</td><td>The buyer&rsquo;s name. Saved in History and can show on the receipt.</td></tr>
-<tr><td>Include startup/cleaning ink</td><td>Printers use some ink to start up and clean the print head. Ticking this adds the amounts from the Ink preset (section 7) <em>once</em> to the job. It adds nothing until you enter values there. Leave it off for normal jobs.</td></tr>
-<tr><td>Print after analyzing</td><td>Analyzes the pages, then opens your device&rsquo;s print dialog with the selected pages (all copies included) and shows the result when you return. Choose the printer, duplex and color in the dialog. If you cancel you can save the calculation as &ldquo;not printed&rdquo;. If ink tracking is on, a printed job deducts its ink. Word files cannot be printed from the app.</td></tr>
-</table>
-<p>Every option has an <strong>(i)</strong> button with a short explanation.</p>
-<h3>3.4 Analyze &amp; Calculate</h3>
-<p>The button at the bottom stays disabled until a file, a paper preset and an ink preset are chosen. While it works, a screen shows <em>Analyzing page X of N</em> and everything is paused. Each calculation is saved to <strong>History</strong> automatically with a reference number.</p>
-<h3>3.5 Editing a History record</h3>
-<p>Tap the pencil on a History record. An amber banner appears. Change what was wrong, pick the file again if asked, and tap Analyze &amp; Calculate. The same record (and reference number) is updated.</p>
-<p>The App also remembers the screen: when you close and reopen it, your presets, fields and last result are back.</p>
-
-<h2 id="results">4. Reading the results</h2>
+<p>The summary under the choice shows the paper size, how much ink that size uses compared with A4, the ink charge rule, and your ink and paper stock. Amber notices warn about things like a page count outside the preset's tier, low stock, or a paper with no price.</p>
+<h3>Print options</h3>
 <ul>
-<li><strong>FINAL PRICE</strong>: the amount to charge. Under it: Paper, Ink, Fees and Setup, and the count of B&amp;W, Color and Blank pages.</li>
-<li>If you change anything after calculating, the price turns grey with a line through it and a note asks you to calculate again.</li>
-<li><strong>Receipt PDF</strong> and <strong>Receipt Image</strong> buttons.</li>
-<li><strong>Print analysis details</strong> (closed by default): calculation model, estimated ink (mL) and cost per color, paper, charged ink fee, and <em>View calculation details</em> (every formula input).</li>
-<li><strong>Page-by-page table</strong> (closed by default): coverage C/M/Y/K, type, paper, ink, other and price per page.</li>
+<li><strong>Target pages:</strong> <code>ALL</code>, a range like <code>1-5</code>, or a list like <code>1, 3, 7</code>. <strong>Select</strong> lets you tick pages.</li>
+<li><strong>Copies:</strong> use +/- or type a number (minimum 1). <strong>Print sides:</strong> 1 side or 2 sides.</li>
+<li><strong>Customer:</strong> optional name for the receipt.</li>
+<li><strong>Print after analyzing:</strong> sends the file to the print dialog first, then deducts ink and paper and shows the result.</li>
+<li><strong>Fees &amp; extras:</strong> finishing fee per page and a one-time setup fee.</li>
+<li><strong>Advanced:</strong> color mode (auto-detect, all black &amp; white, all color), analysis source (automatic, server, on-device) and including startup/cleaning ink.</li>
 </ul>
-<p>Ink amounts are <strong>estimates</strong>, never exact measurements.</p>
+<p>Tap <strong>Analyze &amp; Calculate</strong>. The App measures the ink on each page, then shows the price.</p></section>
 
-<h2 id="price">5. How the price is calculated</h2>
-<p>For every page:</p>
-<div class="box"><code>Page price = paper + ink + maintenance + finishing</code></div>
+<section id="result"><h2>3. Reading the result</h2>
 <ul>
-<li><strong>Paper</strong> = the higher of (pack cost &divide; sheets) and the paper preset&rsquo;s <em>Base rate</em>. On duplex each page pays half a sheet.</li>
-<li><strong>Ink</strong> depends on the ink preset&rsquo;s <em>Charge mode</em> (see below). Blank pages have no ink charge.</li>
-<li><strong>Maintenance</strong> = the printer preset&rsquo;s per-page fee.</li>
-<li><strong>Finishing</strong> = your finishing fee per page.</li>
+<li><strong>Final price</strong> is the biggest number. Below it: Paper, Ink, Fees, Setup, and Rounding if it changed the price ("Rounded from ...").</li>
+<li>If you change anything after calculating, the price is marked <strong>outdated</strong>: calculate again.</li>
+<li><strong>Print analysis details → How this price was worked out</strong> walks through the job in plain language, with your own numbers: pages, paper, ink (with an example page), the total, and rounding.</li>
+<li>The page-by-page table shows C/M/Y/K coverage, paper, ink and price for every page.</li>
 </ul>
-<div class="box"><code>Total = (sum of page prices &times; copies, with paper counted by physical sheets + setup fee)</code></div>
-<h3>Charge modes</h3>
+<h3>How the price is made</h3>
 <table>
-<tr><th>Mode</th><th>Ink charge per page</th></tr>
-<tr><td>Fixed price per page</td><td>Exactly the <em>Threshold</em> (B&amp;W page) or <em>Color threshold</em> (color page). Real ink use does not change the price.</td></tr>
-<tr><td>Consumption with minimum</td><td>The estimated ink cost, but never less than the Threshold / Color threshold.</td></tr>
-</table>
-<h3>Example</h3>
-<p>Paper preset &ldquo;Short (&lt;20 pages)&rdquo; (base rate 1.00) with an ink preset using <em>Fixed price</em> 1.00 B&amp;W / 2.00 color. A B&amp;W page = 1.00 + 1.00 = <strong>2.00</strong>; a color page = 1.00 + 2.00 = <strong>3.00</strong>. Ten B&amp;W pages, 1 copy, no extra fees = <strong>20.00</strong>.</p>
+<tr><th>Part</th><th>How it works</th></tr>
+<tr><td>Paper</td><td>Sheets used &times; the higher of your real cost per sheet (pack cost &divide; sheets) and the paper's <em>Base rate</em>. With 2 sides, two pages share a sheet.</td></tr>
+<tr><td>Ink (estimated)</td><td>Coverage of each color on each page, turned into mL by the ink model, then into cost with your bottle price. Quality, paper absorption, the paper's ink use for its size and any ink limit also affect it.</td></tr>
+<tr><td>Ink (charged)</td><td><em>Fixed price per page</em>: a set amount for B&amp;W and for color. <em>By consumption with a minimum</em>: the higher of the estimate and your minimum for that page.</td></tr>
+<tr><td>Fees</td><td>Finishing per page, printer maintenance fee per page, and startup ink if included.</td></tr>
+<tr><td>Setup</td><td>A one-time fee for the job.</td></tr>
+<tr><td>Rounding</td><td>Optional, applied last (section 4).</td></tr>
+</table></section>
 
-<h2 id="rounding">5b. Price rounding (optional)</h2>
-<p><em>Settings &rarr; Price rounding</em> rounds the <strong>final price</strong> to a number you like. It is off by default. Choose what to round to (0.01, 0.05, 0.10, 0.25, 0.50, 1, 5, 10, or your own step) and how: <em>to the nearest</em> (half or more goes up), <em>always up</em>, <em>always down</em>, or <em>up only past my own limit</em> (for example step 1 and limit 0.25: 12.24 becomes 12, 12.25 becomes 13). Examples update as you change the settings.</p>
-<p>When it is on it applies everywhere an amount is shown: the calculator (&ldquo;Rounded from &hellip;&rdquo; appears under the price), receipts and invoices (a <em>Rounding</em> line), History totals, sales, and the Customer page. A customer price file carries the seller&rsquo;s own rounding rule, so a customer sees the same total as the shop.</p>
-<h2 id="pagesize">5c. Page size and ink</h2>
-<p>A bigger page carries more ink at the same coverage %. Ink presets have a <strong>Reference page size</strong>: the size the yields (or your calibration) were measured on. Epson publishes yields on A4. When it is set, other paper sizes scale the ink estimate by page area, so a Long page (8.5 x 13 in) uses about 14% more than A4, and a Short page about 3% less. Leave it blank for no scaling. The Direct model already uses the page area. The ready-made ink presets use A4, and a calibrated copy records the paper size of the prints it was calibrated on. The scaling only changes the <em>price</em> when the ink preset charges by consumption.</p>
-<h2 id="presets">6. Presets</h2>
-<p>Open <strong>Settings</strong> and choose a preset type. Tap a preset to edit it, the copy icon to <strong>duplicate</strong> it, or the bin to delete it (you are asked twice).</p>
-<table>
-<tr><th>Type</th><th>Holds</th></tr>
-<tr><td>Paper</td><td>Size, pack cost, sheets, base rate (your paper price), absorption, ink limit, tier.</td></tr>
-<tr><td>Ink</td><td>Ink model, charge mode, thresholds, bottle prices and volumes, yields, calibration, maintenance and startup ink, tier.</td></tr>
-<tr><td>Printer</td><td>Brand, model, maintenance fee per page.</td></tr>
-<tr><td>Quality</td><td>DPI, ink multiplier, color density, max ink limit.</td></tr>
-</table>
-<h3>The badges in the editor</h3>
-<p>Every field shows how it takes part in the calculation, and the badges change live as you edit:</p>
-<p><span class="b g">USED IN PRICE</span> changes what the customer pays. <span class="b bl">ESTIMATE ONLY</span> changes only the ink estimate (not the price in Fixed mode). <span class="b o">SOMETIMES</span> counts only in some cases. <span class="b gr">NOT USED HERE</span> the selected ink model or mode does not use it. <span class="b gr">INFO ONLY</span> a label.</p>
-<h3>Ink models</h3>
-<table>
-<tr><th>Model</th><th>Meaning</th></tr>
-<tr><td>Manufacturer Yield</td><td>Uses the page yield on the box. Example: 65 mL &divide; 7,500 pages = 0.0087 mL per page at the reference coverage (5%). A page with 10% coverage uses twice that. An approximation.</td></tr>
-<tr><td>Reference Coverage</td><td>Same, but each color can have its own reference coverage %.</td></tr>
-<tr><td>Custom Calibration</td><td>Uses ink you measured yourself (mL per 1% coverage). Most accurate for your own setup. Estimates 0 mL until you enter values.</td></tr>
-<tr><td>Direct mL per coverage</td><td>Uses mL per cm&sup2; at 100% coverage &times; page area &times; coverage. Needs your measurements.</td></tr>
-</table>
-<p>Epson&rsquo;s published L5290 yields are black 4,500 pages and 7,500 pages (composite yield) for each of cyan, magenta and yellow. The App keeps them as published. 65 mL is the replacement <em>bottle</em> volume, not the printer&rsquo;s internal tank capacity.</p>
+<section id="rounding"><h2>4. Price rounding</h2>
+<p>Settings → Price rounding. Turn it on, choose the step (for example 1, 0.50, 5) and how to round: to the nearest, always up, always down, or up only past your own limit. "Try it" shows the effect on sample amounts. Rounding applies to calculations, receipts, sales totals and, if you include it, customer price files. Every result shows the price before rounding and the rounding amount.</p></section>
 
-<h2 id="setups">7. Setups and page-count tiers</h2>
-<p><strong>Setups</strong> (Settings &rarr; Setups) save a paper, ink, printer and quality preset together so you can pick them with one tap (Quick mode). A setup remembers preset <em>names</em>; if you rename a preset, pick it again in the setup.</p>
-<p><strong>Tiers</strong> (Settings &rarr; Page-count tiers) are rules like &ldquo;&lt;20 pages&rdquo; and &ldquo;20+ pages&rdquo;. You can rename them, change the limits or add your own. Give a preset or setup a Tier and the App warns you when the job does not fit it. Tiers never change prices by themselves.</p>
-
-<h2 id="ink-levels">7b. Printer ink levels (optional)</h2>
-<p>You can track how much ink is left in each color of your printer. Open your <strong>Printer preset</strong> and fill in <em>Ink tracking</em>:</p>
+<section id="receipts"><h2>5. Receipts, sales and history</h2>
 <ul>
-<li><strong>Max = 100%</strong> (mL): your own 100% mark for the color, for example one full bottle. (The printer&rsquo;s internal tank size is not published, so this is your definition.)</li>
-<li><strong>Ink left</strong>: type it as <strong>mL or as %</strong>. The two boxes are linked: typing one updates the other.</li>
-<li>Leave a color blank to not track it.</li>
-<li><strong>Ink tracking</strong> mode: <em>Off</em>; <em>Manual</em> (tap <strong>Deduct ink from printer</strong> on the result after you print); <em>Automatic</em> (every calculation deducts its estimated ink).</li>
+<li><strong>Receipt PDF / Image:</strong> from a result. Receipts use the store details you ticked in Store info &amp; currency. They are for your records and are not official tax receipts.</li>
+<li><strong>Create sale:</strong> turns a job into a sale where you can add items, discounts, charges, payments, credit and a due date, and void it. On the Sales screen the figures (totals, cost, profit) are <strong>hidden every time you open it</strong>; tap the eye to show them for that visit.</li>
+<li><strong>History:</strong> every calculation is saved with its reference number. Open one to view, share a receipt, or edit and recalculate. Export and import of everything is done from Settings (see section 9).</li>
+</ul></section>
+
+<section id="stock"><h2>6. Ink and paper tracking</h2>
+<p>Optional. Turn on <em>Ink tracking</em> in a Printer preset (levels per color) and <em>Stock tracking</em> in a Paper preset (sheets left). Choose automatic (deducted when you calculate) or manual (you tap deduct). On a result you can <strong>Undo</strong> a deduction (it is given back) and <strong>Redo</strong> it if that was a mis-tap. Ink and stock logs keep a history, and you can undo or redo changes there too. Low-stock alerts show on the main screen.</p></section>
+
+<section id="settings"><h2>7. Settings</h2>
+<ul>
+<li><strong>Simple / Advanced view:</strong> Simple shows only what changes a price or identifies something. Advanced shows everything, including print time, tiers and the analysis server. Hidden settings keep their values.</li>
+<li><strong>Store info &amp; currency:</strong> tick the fields to print on receipts; choose your currency.</li>
+<li><strong>Price rounding:</strong> see section 4.</li>
+<li><strong>Presets:</strong> Setups, Paper, Ink, Printer, Quality. Add the ready-made presets at any time (existing ones are not duplicated).</li>
+<li><strong>Print time (Advanced):</strong> estimated time of a print. Time real prints and recalibrate. It never changes a price.</li>
+<li><strong>Page-count tiers (Advanced):</strong> names like "&lt;20 pages" and "20+ pages" you can give to presets and setups. Renaming a tier updates the presets that use it.</li>
+<li><strong>Analysis server (Advanced):</strong> optional address of a Ghostscript server for more exact coverage. Blank = on your phone. The file you analyze is uploaded to this server.</li>
+<li><strong>Switch to Customer mode</strong>, <strong>Tutorial</strong>, Assumptions &amp; limits (with a worked example), About the Prompter, Privacy Policy, Terms of Use, User Manual.</li>
 </ul>
-<p>The main screen then shows bars with the ink left in each color (red under 15%), with <strong>Update</strong> and <strong>Refill</strong> buttons, and warns <em>Not enough ink</em> if a job needs more than what is left. If you edit and recalculate a record, its old deduction is given back first, so nothing is counted twice; <strong>Undo deduction</strong> gives it back too.</p>
-<p>Deductions use the <em>estimated</em> mL of a calculation, so the levels are estimates. Check your printer now and then and update the levels. Maintenance and startup ink are not deducted.</p>
-<h2 id="calibrate">7c. Ink log and calibration</h2>
-<p>Estimates drift from real use. To fix that, compare the <em>real</em> level in the tank with what the app estimated. On the main screen tap <strong>Ink log &amp; calibrate</strong> (shown when the printer has levels).</p>
+<h3>Unsaved changes</h3>
+<p>In the preset editor, Store info and Price rounding, anything you changed but did not save gets an <strong>amber outline</strong> with "Changed · was: ..." and an <strong>Undo</strong> button. The Save bar counts the changes and <strong>Next change</strong> scrolls to each one. If you leave with unsaved changes, the App asks to Keep editing, Discard or Save.</p></section>
+
+<section id="presets"><h2>8. Presets in detail</h2>
+<h3>Paper</h3>
+<ul>
+<li><strong>Size:</strong> pick from the list (Short, Long, Legal, A4, A3, A5, B5, photo sizes and more) or type your own, such as <code>5x7 in</code>.</li>
+<li><strong>Ink use vs A4 (%):</strong> how much ink a page of this size uses compared with A4 (A4 = 100). It fills in from the size's area (Long is about 114%, 14% more) and you can change it; "Use the default for this size" resets it.</li>
+<li><strong>Paper type:</strong> plain, bond, recycled, inkjet quality print, cardstock, sticker, matte or gloss photo paper. A type suggests an <strong>Absorption factor</strong> (an estimate you can change).</li>
+<li><strong>Pack cost, Sheets per pack, Base rate:</strong> the price per sheet is the higher of real cost and base rate. A blank or 0 base rate means no minimum (for example photo paper priced only by its real cost).</li>
+</ul>
+<h3>Ink</h3>
+<ul>
+<li><strong>Ink model:</strong> <em>Manufacturer Yield</em> (from the published page yield; the ready-made default), <em>Reference Coverage</em>, <em>Custom Calibration</em> (from your own measured mL) or <em>Direct mL per coverage</em>.</li>
+<li><strong>Reference page size:</strong> the page the yields were measured on (Epson: A4).</li>
+<li><strong>Charge mode and minimums:</strong> fixed price per page, or by consumption with a minimum for B&amp;W and for color.</li>
+<li>Bottle price, bottle volume and yield per color; maintenance and startup ink; calibration notes (Advanced).</li>
+</ul>
+<h3>Printer, Quality, Setups</h3>
+<ul>
+<li><strong>Printer:</strong> maintenance fee per page, print-time numbers, and optional ink tracking per color.</li>
+<li><strong>Quality:</strong> ink multiplier, color density multiplier and an optional ink limit.</li>
+<li><strong>Setup:</strong> remembers a paper + ink + printer + quality combination and an optional tier. If you rename a preset, setups follow it. If you delete one, you are told which setups use it.</li>
+</ul></section>
+
+<section id="backup"><h2>9. Backup, import and customer files</h2>
+<h3>Export backup</h3>
+<p>Settings → Export backup. Choose what to include: store info, price rounding, app preferences, tiers, analysis server, signing key, presets, history, sales and logs. <strong>Ticking a setup automatically ticks the paper, ink, printer and quality presets it needs</strong> (locked while the setup is ticked). Add a password for real protection. The file is a <code>.sprint</code> file.</p>
+<h3>Import backup</h3>
+<p>Settings → Import backup. Pick the file, enter the password if it has one, choose what to import, and decide how to treat presets with the same name (keep both, skip or replace). Setups that come with their parts follow any renamed parts.</p>
+<h3>Customer price file</h3>
+<p>Settings → Export customer price file. It is encrypted and signed (<code>.sprice</code>). Choose the presets and settings to include, which store details to show, validity (days), a message, finishing and setup fees, and what customers may do:</p>
+<table>
+<tr><th>Option</th><th>Effect</th></tr>
+<tr><td>Let customers choose Custom</td><td>On: Quick (your setups) or Custom (their own paper, printing, quality). Off: they only pick one of your setups.</td></tr>
+<tr><td>Show breakdown / page table / analysis</td><td>Whether they see paper, printing, fees and setup, the per-page table, and the analysis details.</td></tr>
+<tr><td>Choose pages / copies / sides / color mode</td><td>What they can change.</td></tr>
+<tr><td>Show print time</td><td>Include an estimated time.</td></tr>
+<tr><td>Price rounding</td><td>Customers get the same rounded prices.</td></tr>
+</table>
+<p>Send the file to your customer (chat, email, file share). It never contains your sales or history.</p></section>
+
+<section id="customer"><h2>10. Customer mode</h2>
 <ol>
-<li><strong>Refill / start</strong>: when you fill the tank or set a level, add an entry (date, time and the level of each color, in mL or %).</li>
-<li>Print as usual. Each calculation is saved in History.</li>
-<li><strong>Actual reading</strong>: later, look at the tank and add what you really see. The newest entry is the current baseline; ink already deducted for prints made after it is taken off again.</li>
-<li><strong>Calibrate from the log</strong>: pick a start and an end entry. The app lists the History prints of that printer in between (untick quotes or tests), and for each color shows the <em>actual</em> drop, the <em>estimated</em> use and the <em>factor</em> (actual &divide; estimated).</li>
-<li>Tick the colors to recalibrate (one, several or all) and tap <strong>Create calibrated preset</strong>.</li>
+<li>Tap the folder button and open the shop's price file. The App checks the shop's signature and the expiry date.</li>
+<li>Choose your files, and optionally the pages.</li>
+<li>Choose an option: <strong>Quick</strong> (the shop's setups) and, if the shop allows it, <strong>Custom</strong>.</li>
+<li>Set copies and sides, optionally type your name for the invoice, then tap <strong>Calculate my price</strong>.</li>
+<li>The <strong>estimated total</strong> shows paper, printing, fees, setup and any rounding the shop applies. Open <strong>How this price is calculated</strong> for the steps. Save or share an <strong>invoice</strong> as a PDF or image.</li>
 </ol>
-<p>The app makes a <strong>copy</strong> of the ink preset that uses the <em>Custom Calibration</em> model (mL per 1% coverage = the old value &times; factor; colors you did not tick keep the old value), plus copies of the setups that used the old ink preset. Your originals are never changed. Tick <em>Charge by consumption</em> if you want the calibrated usage to change the price (Fixed price ignores ink use).</p>
-<p>Every manual change to the levels is logged per color, and an entry&rsquo;s menu has <em>Undo change for colors&hellip;</em>. For a reliable calibration use many prints, with the same paper and quality, and a drop of at least a few percent of the tank (the app warns under 3%).</p>
-<h2 id="paper-stock">7d. Paper stock (optional)</h2>
-<p>Each <strong>Paper preset</strong> can count the sheets you have left. In the preset, open <em>Paper stock</em> and set:</p>
+<p>Your files are analyzed on your phone, and nothing is sent to the shop by the App. The price is an estimate; the shop's own count and final price prevail. Run a shop? Tap the storefront button to switch to Shop mode.</p></section>
+
+<section id="tips"><h2>11. Tips and troubleshooting</h2>
 <ul>
-<li><strong>Sheets left</strong>: how many sheets you have now. Blank = not tracked.</li>
-<li><strong>Stock tracking</strong>: <em>Off</em>; <em>Manual</em> (tap <strong>Deduct paper from stock</strong> on the result after you print); <em>Automatic</em> (every calculation deducts its sheets).</li>
-<li><strong>Low stock alert</strong>: at or below this number the stock turns red.</li>
-</ul>
-<p>A job takes off the <em>physical sheets</em> it uses: copies are included and duplex counts two pages per sheet. With <em>Print after analyzing</em>, a job that was really printed deducts its sheets; a job saved as &ldquo;not printed&rdquo; deducts nothing. <strong>Undo paper deduction</strong> gives the sheets back, and editing and recalculating a record gives its old sheets back first, so nothing is counted twice.</p>
-<p>On the main screen the paper card shows the sheets left with <strong>Add stock</strong> (default = one pack), <strong>Count</strong> (set the exact number) and <strong>Log</strong> (every change, each can be undone). The app warns <em>Not enough paper</em> before you calculate if the job needs more sheets than are left. Deleting a History record does not give its sheets back.</p>
-<h2 id="print-time">7e. Print time (estimate)</h2>
-<p>Every result shows an <strong>estimated print time</strong> (the clock chip, for example &ldquo;&asymp; 2 min 30 s&rdquo;). It is only an estimate and <strong>never changes a price</strong>.</p>
-<p><strong>How it is worked out:</strong> <em>printed sides &times; time per side</em> (Printer preset, default 3 s: paper feed, warm-up) <em>+ estimated mL &times; seconds per mL</em> (Ink preset, default 60 s). Heavier, more colorful, higher-quality or larger pages carry more ink, so they take longer. Turn it off with <em>Print time estimate</em> in the Printer preset.</p>
-<p><strong>Timing real prints:</strong> tap the clock chip on a result. A stopwatch opens: start it when the printer starts, stop it when the last page is out (or type the time) and save. <em>Settings &rarr; Print time</em> lists the timed prints of a printer + ink preset and recalibrates both numbers from them (with 3 or more prints of different sizes it fits the time per side too).</p>
-<p><strong>Connected to the ink calibration:</strong> seconds per mL belongs to the Ink preset because it is tied to that preset&rsquo;s mL scale. When you calibrate the ink (Ink log &rarr; Calibrate) and the estimate changes by a factor, the calibrated copy gets <em>seconds per mL divided by that factor</em>. So a print that really takes the same time still takes the same time: if a print was 1 mL (3 s per mL) and calibration shows it really used 2 mL, the same print is now 2 mL at 1.5 s per mL, and a job of 1 mL now gets 1.5 s.</p>
-<p>A seller can show or hide the estimated time on the customer price file.</p>
-<h2 id="store">8. Store info and currency</h2>
-<p><em>Settings &rarr; Store info &amp; currency</em>: store name (Sold by), attendant (Served by), address, contact number, email or social page, business/tax ID, and a footer message. <strong>Tick the box in front of a field</strong> to print it on receipts; unticked fields never appear.</p>
-<p>Choose your currency from the list, or pick <em>Other</em> and type a code and symbol. The App shows the symbol; receipts print the code (for example PHP) because the PDF font cannot draw many symbols.</p>
+<li><strong>Prices look wrong:</strong> check every preset (paper pack cost and base rate, ink prices and minimums, quality multiplier). Open the result's "How this price was worked out".</li>
+<li><strong>"Paper has no price" warning:</strong> pack cost and base rate are both 0. Enter your paper cost.</li>
+<li><strong>Result says outdated:</strong> you changed something; calculate again.</li>
+<li><strong>Cannot see a setting:</strong> you may be in Simple view. Switch to Advanced in Settings, or tap "Show all" in a preset.</li>
+<li><strong>Word files:</strong> page count may be unknown and a Word file must be used alone.</li>
+<li><strong>Customer file will not open:</strong> it may have expired, been edited, or need a password. Ask the shop for a new one.</li>
+<li><strong>New phone:</strong> export a backup with a password, move it, then import it.</li>
+</ul></section>
 
-<h2 id="history">9. History</h2>
-<ul>
-<li>Every calculation is saved automatically with a reference number like <code>20261001-1432-0007</code> (date, time, print number).</li>
-<li>Tap a record to make its receipt. The <strong>pencil</strong> edits and recalculates it. The <strong>bin</strong> deletes it (asked twice).</li>
-<li>The icons at the top <strong>export</strong> all records to a file and <strong>import</strong> them back. Records with a reference number that already exists are skipped.</li>
-</ul>
+<section id="contact"><h2>12. Contact</h2>
+<p>Prompter: Marlou Padua<br>App: Sumaha Print<br>Email: <a href="mailto:marloupadua555678@gmail.com">marloupadua555678@gmail.com</a></p>
+<p class="muted">Last updated: October 18, 2026. See also the <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-use.html">Terms of Use</a>.</p></section>
 
-<h2 id="receipt">10. Receipts</h2>
-<p>Tap <strong>Receipt PDF</strong> or <strong>Receipt Image</strong> (one whole tall image, so the table is never cut). A &ldquo;Preparing&hellip;&rdquo; pop-up shows while it is made, then choose <strong>Save to phone</strong> or <strong>Share</strong>. A receipt shows the reference number, date, customer, store details you ticked, the colored page table, subtotal, setup fee (only if above 0) and total. Each file name is unique, so edited receipts never overwrite old ones.</p>
-
-<h2 id="sales">10b. Sales</h2>
-<p>History keeps every calculation. <strong>Sales</strong> records what a customer actually pays. Open it with the <strong>cash-register icon</strong> in the top bar, or tap <strong>Create sale</strong> under a result (start a new sale or add the result to an open one).</p>
-<p><strong>Viewing a sale.</strong> Tapping a sale in the list opens it in <em>view mode</em>: the items (tap a print item to see its analysis and page table), the <strong>Cashier</strong> (totals, payments, balance) and the buttons <strong>Receipt PDF</strong> and <strong>Receipt Image</strong>. Use the pencil (or <em>Edit sale</em>) to change it.</p>
-<ul>
-<li><strong>Items</strong>: add as many calculations as you want (<em>From History</em>) and manual items such as lamination or binding (quantity, unit price, your cost).</li>
-<li><strong>Cashier</strong>: discount (money or %), then the rounding rule, give the <strong>TOTAL DUE</strong>. Pick how it is paid: <strong>Cash, Maya, GoTyme, MariBank, GCash, Others</strong> or <strong>Credit</strong>. Type <em>Price paid by customer</em> (or <em>Exact</em>); the sale shows <em>Change to give</em> or <em>Balance due</em>.</li>
-<li><strong>Credit</strong>: the customer pays from time to time. You can add <strong>interest</strong> (% or an amount, optional) and a due date, take a <strong>down payment</strong>, then <em>Add payment</em> each time they pay (with its method and a note). <em>Add interest</em> adds a new interest charge to the balance later. Each payment can be removed (asked twice).</li>
-<li>Status is <strong>Paid</strong>, <strong>Partial</strong>, <strong>Unpaid</strong> or <strong>Void</strong>; <em>On credit</em> filters sales still being paid off. Void keeps the record but leaves it out of the totals.</li>
-<li><strong>Receipt</strong>: the sales receipt still shows everything from the analysis and calculation of each print (paper, ink, printer, quality, copies, the colored page table, subtotal, setup, rounding), then adds the discount, credit interest, payments, change or balance due and a PAID / PARTLY PAID / ON CREDIT / UNPAID banner.</li>
-<li><strong>Hide sales data</strong>: the eye icon (and the three-dots menu in a sale) hides the sales totals, estimated cost and estimated profit behind &bull;&bull;&bull;&bull; and remembers your choice. Estimated profit = total minus the estimated ink and paper cost of print items (and any cost you typed).</li>
-<li>The Sales list shows totals (sales, collected, to collect, estimated profit), search, status and period filters, and <strong>CSV export</strong>. Every delete asks twice. Sales are included in the encrypted backup.</li>
-</ul>
-<h2 id="backup">11. Backup and restore (encrypted)</h2>
-<p><em>Settings &rarr; Export backup (encrypted)</em> saves a <code>.sprint</code> file. It is encrypted (AES-256), so it cannot be read in a text editor and opens only in Sumaha Print. Add a <strong>password</strong> for much stronger protection: without it, nobody can open the file; if you forget it, the file cannot be recovered.</p>
-<p>You choose exactly what goes in: store info and currency, the analysis server, page-count tiers, each preset type (or individual presets) including setups, History records, the <strong>ink log and paper stock log</strong>, the <strong>signing key</strong>, and whether to keep your <strong>current ink levels and paper stock counts</strong>.</p>
-<p>The file name tells you what is inside, for example <code>sumahaprint_backup_LuzStore_20261008-143012_6setups-9paper-8ink-1printer-4quality-25history_locked.sprint</code> (&ldquo;locked&rdquo; = password-protected).</p>
-<p><em>Import backup</em> opens a <code>.sprint</code> file (older unencrypted backups still work), asks for the password if needed, and lets you choose what to bring in and what to do when a name already exists (keep both, skip, or replace). Logs are matched to your printer and paper presets by name.</p>
-<h2 id="customer">11b. Customer price file and the Customer page</h2>
-<p>Sellers can give customers their prices without giving away the setup. <em>Settings &rarr; Export customer price file (signed)</em> creates an encrypted, <strong>signed</strong> <code>.sprice</code> file. Choose the store details to show, the presets and setups to include, and what the customer may see and change (pages, copies, sides, color mode, price breakdown, analysis details, page table). You can set fixed finishing and setup fees, a message, a default color mode and sides, and how many days the file stays valid.</p>
-<p>A price file <strong>cannot be imported</strong>. It opens only on the <strong>Customer page</strong>: on the main screen tap <strong>I&rsquo;m a customer</strong> beside <em>Presets</em>, then <em>Open price file</em>.</p>
-<ul>
-<li>After a password-protected file has been opened once, the page remembers it on that phone: it does not ask for the password again until you remove the price file (<em>Remove this price file</em>).</li>
-<li>The page checks the shop&rsquo;s signature. If the file was changed, it is refused. It shows the shop&rsquo;s name and a short <strong>Key ID</strong>; the seller can share their Key ID so customers can compare.</li>
-<li>The customer adds files, picks an option, and taps <strong>Calculate my price</strong>. The page shows only what the seller allowed: <strong>You pay</strong>, optionally the breakdown, <em>Analysis details</em> (pages, sheets, coverage; never ink formulas, bottle prices or minimums) and the page-by-page table.</li>
-<li>The customer can save or share an <strong>Invoice PDF</strong> or <strong>Invoice Image</strong>. Nothing is saved to the shop&rsquo;s History.</li>
-</ul>
-<p><strong>Good to know:</strong> without a password the encryption key is built into the app, so the files stop casual reading and editing but are not secret from someone who reverse-engineers the app. Use a password for anything sensitive. The signature proves the file was not changed after the seller signed it; it cannot prove who the seller is, so customers should compare the Key ID with the shop.</p>
-<h2 id="server">12. Analysis server (optional)</h2>
-<p>For more accurate coverage and Word file support you can run the included Ghostscript &ldquo;inkcov&rdquo; server on your own computer or hosting. Enter its address in <em>Settings &rarr; Analysis server</em> (for example <code>http://192.168.1.10:8000</code>) and an optional API key. Your documents are sent to that server only. Leave the address blank to stay fully on-device. If the server cannot be reached, the App falls back to the on-device estimate.</p>
-
-<h2 id="faq">13. Troubleshooting</h2>
-<table>
-<tr><th>Problem</th><th>What to check</th></tr>
-<tr><td>The price is not what I expected</td><td>Check the ink preset&rsquo;s <strong>Charge mode</strong>. With <em>Fixed price per page</em> the price ignores real ink use. Remember each page is paper + ink + maintenance + finishing. Open the details to see each part.</td></tr>
-<tr><td>The price is grey with a line</td><td>You changed something after calculating. Tap Analyze &amp; Calculate again.</td></tr>
-<tr><td>Analyze is disabled</td><td>Choose a file, a paper preset and an ink preset.</td></tr>
-<tr><td>A colored page was priced as B&amp;W</td><td>On-device detection can miss tiny colored areas. Set Color mode to <em>All Color</em>, or use an analysis server.</td></tr>
-<tr><td>Editing a record asks me to pick the file again</td><td>The original file is no longer available on the phone. Pick it again.</td></tr>
-<tr><td>Warning about tiers</td><td>The job&rsquo;s page count does not fit the preset&rsquo;s tier. Switch preset or setup, or edit the tier in Settings.</td></tr>
-<tr><td>A setup warns about a missing preset</td><td>A preset it uses was renamed or deleted. Edit the setup and choose it again.</td></tr>
-<tr><td>Currency symbol missing on the receipt</td><td>Receipts print the currency <em>code</em> on purpose.</td></tr>
-</table>
-
-<h2 id="glossary">14. Glossary</h2>
-<table>
-<tr><th>Term</th><th>Meaning</th></tr>
-<tr><td>Coverage (C/M/Y/K %)</td><td>How much of a page is covered by each ink color.</td></tr>
-<tr><td>Yield</td><td>Pages a bottle prints, as published by the manufacturer.</td></tr>
-<tr><td>Reference coverage</td><td>The coverage % one yield page represents (default 5%). Editable, not universal.</td></tr>
-<tr><td>Threshold / Color threshold</td><td>The B&amp;W / color ink price (Fixed mode) or minimum charge (Consumption mode).</td></tr>
-<tr><td>Base rate</td><td>Your minimum paper price per sheet.</td></tr>
-<tr><td>Setup</td><td>A saved combination of paper, ink, printer and quality presets.</td></tr>
-<tr><td>Tier</td><td>A page-count rule such as &ldquo;&lt;20 pages&rdquo;.</td></tr>
-<tr><td>Simplex / Duplex</td><td>Printing on one side / both sides of the paper.</td></tr>
-</table>
-<div class="box warn"><strong>Limits:</strong> ink and price results are estimates. On-device coverage uses a simple RGB-to-CMYK method and is not color-managed. Presets reflect the developer&rsquo;s printer until you change them. Keep backups of your data.</div>
-</main><footer>Sumaha Print &middot; Developer: Marlou Padua &middot; Contact: <span class="ph">[YOUR EMAIL]</span></footer></body></html>
+</main>
+<footer>Sumaha Print is made by the Prompter, Marlou Padua. Questions: <a href="mailto:marloupadua555678@gmail.com">marloupadua555678@gmail.com</a></footer>
+</body></html>
